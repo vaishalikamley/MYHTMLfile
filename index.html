@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f6940c4278.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+       <nav>
+            <img src="" alt="">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="profile-box">
+            <img src="images/menu - Copy.png" class="menu-icon">
+            <img src="images/download-file-round-icon.png" class="download-icon">
+            <img src="images/image1.jpg" class="profile-pic">
+            <h3>Ammy Roy</h3>
+            <p>UI/UX Web Designer</p>
+            <div class="social-media">
+                <img src="images/dribbble-round-icon.png" class="dribbble-icon">
+                <img src="images/telegram-black-icon.png" class="telegram-icon">
+                
+            </div>
+            <button type="button">Follow</button>
+            <div class="profile-bottom">
+                <p>Know More About My profile</p>
+                <i class="fa-solid fa-arrow-down" class="arrow-icon"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------ABOUT-------------------------- -->
+  <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/image1.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">&nbsp;About Me&nbsp;&nbsp;&nbsp;</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nam odio voluptas placeat necessitatibus issimos. Accusantium nam odio voluptas placeat necessitatibus issimos. </p>
+
+                <div class="tab-titles ">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"  onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Designing web/App Interfeces</li>
+                    <li><span>Web Development</span><br>Web app Development</li>
+                    <li><span>Photoshop</span><br>Photoshop</li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Jan 2024- Present</span><br>UI/UX Design Training at Infinite Graphix Institute</li>
+                    <li><span>Sep 2018 - Dec 2023</span><br>Ahlkhd Hhhkha</li>
+                    <li><span>Jul 2015 - Aug 2018</span><br>Ajjlkalkdls jsglkdl jsjfj</li> 
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2024</span><br>UI/UX Design Training at Infinite Graphix Institute, Pune.</li>
+                    <li><span>2015</span><br>MBA HR IT, Mumbai.</li>
+                    <li><span>2013</span><br>BE Electronics Design Technology, Mumbai.</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  <!-- -------------------Services--------------------------- -->
+  <div id="services">
+    <div class="container">
+        <h1 class="sub-title">&nbsp;My Services&nbsp;&nbsp;&nbsp;</h1>
+        <div class="sevices-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio ipsa, aspernatur enim doloribus sapiente numquam hic illo</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio ipsa, aspernatur enim doloribus sapiente numquam hic illo</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus odio ipsa, aspernatur enim doloribus sapiente numquam hic illo</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+
+    </div>
+  </div>
+  <!-- --------------------------Portfolio---------------------- -->
+  <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">&nbsp;My Work&nbsp;&nbsp;&nbsp;</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/image-work2.png">
+                <div class="layer">
+                    <h3>Map App</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, alias? Illo autem debitis placeat </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/image-work3.png">
+                <div class="layer">
+                    <h3>Employee App</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, alias? Illo autem debitis placeat </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/image-work4.png">
+                <div class="layer">
+                    <h3>Food App</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, alias? Illo autem debitis placeat </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+  <!-- ------------------------------contact------------------ -->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title1">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>contact@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>0123456789</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></i></a>
+                </div>
+                <a href="images/CV-pdf.png" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" id=""  rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                
+                </form>
+                <span id="message"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ammyroy</p>
+    </div>
+  </div>
+
+</div>
+
+   <script> 
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-90px";
+    }
+  </script>
+  
+</body>
+</html>

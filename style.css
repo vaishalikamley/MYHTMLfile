@@ -1,0 +1,551 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:' poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #090909;
+    color: #fff;
+}
+
+#header{
+    width:100%;
+    height:100vh;
+    background-image: url(images/codeimage.png);
+    background-size: cover;
+    background-position:center ;
+}
+.container{
+    padding:40px 15%;
+}
+
+.profile-box{
+    width: 350px;
+    background: #ff004f;
+    text-align:center ;
+    padding: 40px 90px;
+    color: #fff;
+    position: relative;
+    border-radius: 20px;  
+    margin-top: 20px; 
+    box-shadow: 0 0 100px rgb(47, 210, 255);
+}
+
+.menu-icon{
+    width: 25px;
+    position: absolute;
+    left: 40px;
+    top: 40px;   
+    cursor: pointer;
+   }
+.download-icon{
+    width: 25px;
+    position: absolute;
+    right: 40px;
+    top: 40px;   
+    cursor: pointer;
+   }
+
+.profile-pic{
+    width: 180px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 6px;
+    margin-top: 10px;
+}
+ 
+.profile-bottom{
+    background: #fff;
+    color: #999;
+    padding: 60px 0;
+    margin-right: -90px;
+    margin-left: -90px;
+    margin-bottom: -40px;
+    border-radius: 20px;
+    margin-top: -10px;
+}
+/* .profile-bottom:hover{
+    background: transparent;
+} */
+
+.profile-box button{
+    background: #fff;
+    color: #ff5740;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(244, 67, 54, 0.5);
+    padding: 15px 60px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-bottom: -50px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.profile-box h3{
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 500px;
+}
+.social-media img{
+    width: 30px;
+    margin: 20px 5px;
+    cursor: pointer;
+
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin: 10px 8px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position:relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+
+/* -------------------------ABOUT--------------------------- */
+#about{
+    padding: 80px 0;
+    color:whitesmoke;
+}
+
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+}
+.about-col-1{
+    flex-basis: 30%;
+    margin-left: 0;
+}
+
+.about-col-1 img{
+    width: 100%;
+    height:330px;
+    border-radius: 15px;
+    box-shadow: 0 0 100px rgb(47, 210, 255);
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 50%;
+    color:whitesmoke;
+    text-decoration:none;
+}
+.sub-title:hover{
+    text-decoration: line-through;
+    text-decoration-color: #999;
+    text-decoration-thickness: 5px;
+    
+    opacity: ;
+}
+
+.tab-titles{
+    display:flex;
+    margin:20px 0 40px;
+}
+.tab-links{
+    margin-right: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom:-8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width:70%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin:10px 0;
+}
+.tab-contents ul li span{
+    color: #a76378;
+    font-size: 14px;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* -------------------------Services--------------------- */
+
+#services{
+    padding: 30px 0;
+}
+.sevices-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.sevices-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    /* transition: background 0.5s, transform 0.5s; */
+    box-shadow: 0 0 25px rgb(47, 210, 255);
+}
+.sevices-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+    
+}
+.sevices-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.sevices-list div a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.sevices-list div:hover{
+    background: #ff004f;
+    /* transform: translateY(-10px);  */
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3); 
+    transform: scale(1.3);
+}
+/* -------------------------Portfolio------------------------- */
+#portfolio{
+    padding:50px 0;
+}
+.work-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+   
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgb(47, 210, 255);
+}
+.work img{
+    width:100%;
+    height:300px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    
+}
+.layer{
+    width:100%;
+    height: 0;
+    background:linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position:absolute;
+    left:0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color:#ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+/* ---------------------contact-------------------------- */
+.sub-title1{
+    font-size: 60px;
+    font-weight: 50%;
+    color:whitesmoke;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color:#fff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display:inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:#ff004f;
+    transform:translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-left form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding:15px;
+    margin: 15px 0;
+    color:#fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width:100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+#message{
+    color:rgb(238, 184, 34);
+    margin-top: -40px;
+    display: block;
+}
+/* -----------css for small screen to make website Responsive--- */
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    /* background-image: url(); */
+/* if the image is not fit in the phone we change it in this so it will chang in phone but not in the website */
+.profile-box{
+    width: 250px;
+}
+.menu-icon{
+    width: 18px;
+    left: 25px;
+    top: 25px;   
+}
+.download-icon{
+    width: 18px;
+    right: 25px;
+    top: 25px;   
+   }
+.profile-pic{
+    width: 80px;
+}
+.profile-box h3{
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 300px;
+}
+.profile-box p{
+    font-size: 10px;
+    margin-top: 6px;
+    font-weight: 300px;
+}
+.social-media img{
+    width: 20px;
+    margin: 20px 5px;
+}
+.profile-box button{
+    padding: 8px 20px;
+    margin-bottom: -50px;
+    font-weight: 400;
+    font-size: 13px;
+}
+.profile-bottom{
+    padding: 40px 0;
+}
+.sevices-list{
+grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+grid-gap: 50px;
+}
+.sevices-list div{
+padding: 30px;
+font-size: 10px;
+}
+.sevices-list div i{
+    font-size:30px ;
+}
+.sevices-list div h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.sevices-list div a{
+    font-size: 8px;
+    margin-top: 15px;   
+}
+.sevices-list div:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2);
+}
+.header-text {
+    margin-top: 100%;
+    font-size: 12px;
+    padding-bottom: 5px;         
+}
+.header-text h2{
+    font-size: 25px; 
+}
+nav .fa-solid{
+    display: block;
+    font-size: 20px;
+}
+nav ul{
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -90px;
+    width: 90px;
+    height: 100vh;
+    padding-top: 50px; 
+    transition: 0.5s;  
+}
+nav ul li{
+    display: block;
+    margin: 15px;   
+}
+nav ul li a{
+    font-size: 13px;
+}
+nav ul .fa-solid{
+    position: absolute;
+}
+nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 0;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.sub-title{
+    font-size: 30px;
+}
+.sub-title1{
+    font-size: 30px;
+}
+.about-col-1, .about-col-2{
+    flex-basis: 100%;
+
+}
+.about-col-1{
+    margin-bottom: 30px;
+}
+.about-col-2{
+    font-size: 12px;
+    width:260px;
+}
+.tab-links{
+    font-size: 16px;
+    margin-right: 20px;
+}
+.contact-left, .contact-right{
+    flex-basis: 100%;
+}
+.copyright{
+    font-size: 12px;
+    padding: 10px 0;
+}
+#message{
+    color:rgb(238, 184, 34);
+    margin-top: -40px;
+    display: block;
+}
+
+}
