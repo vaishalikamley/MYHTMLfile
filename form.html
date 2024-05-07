@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(36, 36, 36);
+    }
+
+    .myForm{
+
+        /* display: block; */
+        margin-left: 450px;
+        margin-top: 30px;
+        width: 450px;
+        height: 550px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        padding-top: 20px;
+        padding-left: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(248, 244, 244, 0.2), 0 6px 20px 0 rgba(248, 244, 244, 0.2);
+        background-image: linear-gradient(to right, rgb(243, 17, 55), rgb(241, 18, 129));
+    }
+
+    h3{
+        font-family:Tahoma;
+        text-align: center;
+        color:rgb(193, 186, 177);
+        margin-top: 5px;
+        letter-spacing: 3px;
+    }
+
+    hr{
+        width:90%;
+       margin-right:25px;
+       border-bottom: 0.3px groove  rgb(37, 36, 36);
+       margin-bottom: 20px;
+       
+    }
+
+    button {
+        width: 95%;
+        background-color: #04AA6D;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        padding: 8px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        cursor: pointer;
+        /* -webkit-transition-duration: 0.4s; 
+        transition-duration: 0.4s; */
+    }
+
+    .button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+  
+
+    input{
+
+        margin-left: 10px;
+        width:40%;
+        padding-top:5px;
+        padding-bottom: 5px; 
+        width:60%;
+        border:none;
+        outline:none;
+        background:transparent;
+        color:#fff;
+        border-bottom:1px solid rgb(68, 66, 66);
+
+    }
+    
+    </style>
+
+<body>
+    <form action="" class="myForm" autocomplete="off">
+        <h3 class="demo"></h3>
+        <h3>Registration Form</h3>
+        <hr>
+        Enter Username:
+        <input type="text" placeholder="Username" id="t1"><br><br>
+    
+        Enter Password:
+        <input type="password" placeholder="Password " id="t2"><br><br>
+        
+        Confirm password:
+        <input type="password" placeholder="Password" id="t3"><br><br>
+        
+        Enter Age:
+        <input type="number" placeholder="Age" id="t4"><br><br>
+        
+        Enter Contact Number:
+        <input type="number" placeholder="Contact Number" id="t5"><br><br>
+
+        Enter Email ID:
+        <input type="email" placeholder="Email" id="t6"><br><br>
+    
+        <button type="button" class="button" id="b1" onclick="validation()">Register</button><br><br>
+        <span id="s1" style="color:blanchedalmond;"></span>
+    </div>
+    </form>
+
+
+    <script>
+        function validation(value) {
+            let Uname = document.getElementById("t1").value;
+            let pwd = document.getElementById("t2").value;
+            let cpwd = document.getElementById("t3").value;
+            let age = document.getElementById("t4").value;
+            let phone = document.getElementById("t5").value;
+            let email1 = document.getElementById("t6").value;
+            let nameRegex = /^[a-zA-Z\s]+$/;
+            let pattern = /^\d{10}$/;
+            let r = " ";
+
+            if (Uname.length == 0) {
+                r += " Username should not be empty......" + "<br>"
+            }
+
+            if (!nameRegex.test(Uname)) {
+                r += " Usename should be in alphabetic...." + "<br>"
+            }
+
+            if (pwd.length == 0) {
+                r += "Password should not be empty...." + "<br>"
+            }
+
+            if (cpwd.length == 0) {
+                r += "Confirm Password should not be empty...." + "<br>"
+            }
+
+            if (Uname == pwd) {
+                r += "Username and Password should not be same...." + "<br>"
+            }
+
+            if (pwd !== cpwd) {
+                r += "Password and confirm password should be same...." + "<br>"
+            }
+
+            if (pwd.length < 8 || pwd.length > 15)  {
+                r += "Password should be of min  8 character and max 15 character...." + "<br>"
+            }
+
+            if(cpwd.length < 8 || cpwd.length > 15){
+                r +="Invalid password....."
+            }
+
+            if (age.length !== 0) {
+                if (age < 18 || age > 25) {
+                    r += "Age should be above 18yrs and below 25 yrs...." + "<br>"
+                }
+            }
+            else {
+                r += "Age should not be empty...." + "<br>"
+            }
+
+            if (!pattern.test(phone)) {
+                r += "Please enter valid contact number...." + "<br>"
+            }
+
+             if(phone.length==0){
+                r +="Contact number should not be empty...." + "<br>"
+            }
+
+            if (phone.length > 10 || phone.length < 10) {
+
+                r += "Contact number should be 10 digit...." + "<br>"
+            }
+
+            if (email1.length == 0) {
+
+                r += "Email should not be empty....." + "<br>"
+            }
+
+
+
+            document.getElementById("s1").innerHTML = r;
+        }
+            
+        
+
+    </script>
+</body>
+
+</html>
